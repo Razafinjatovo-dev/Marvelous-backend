@@ -11,7 +11,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   const getCharacters = async () => {
     try {
-      console.log(req.query);
+      // console.log(req.query);
       const skip = Number(req.query.skip);
       const response = await axios.get(
         `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${process.env.MARVEL_API_KEY}&skip=${Number(
@@ -73,7 +73,7 @@ app.get("/comics/:characterId", (req, res) => {
       const response = await axios.get(
         `https://lereacteur-marvel-api.herokuapp.com/comics/${req.params.characterId}?apiKey=${process.env.MARVEL_API_KEY}`
       );
-      console.log(response.data);
+      // console.log(response.data);
 
       res.json(response.data);
       // res.json(req.params);
