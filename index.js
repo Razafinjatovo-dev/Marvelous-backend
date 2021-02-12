@@ -32,6 +32,7 @@ app.get("/", (req, res) => {
 
 
 
+
 app.get("/AllCharacters", (req, res) => {
   const getCharacters = async () => {
     try {
